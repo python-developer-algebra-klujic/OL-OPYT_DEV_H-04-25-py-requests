@@ -14,7 +14,7 @@ def get_random_photo() -> str:
         response.raise_for_status()
 
         # content je binary -> odnosno file i koristi se za dohvat slika ili drugih datoteka
-        with open(f'./photos/RohoHashs/RoboHash-{robo_hash_id}.png', 'wb') as photo:
+        with open(f'./RohoHashs/RoboHash-{robo_hash_id}.png', 'wb') as photo:
             photo.write(response.content)
             return f'Datoteka "RoboHash-{robo_hash_id}.png" je uspjesno kreirana!'
 
